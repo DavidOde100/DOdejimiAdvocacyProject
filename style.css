@@ -511,6 +511,7 @@ p {
   align-items: center;
   justify-content: center;
 }
+
 @keyframes heartbeat {
   0% {
     transform: scale(0.8);
@@ -567,5 +568,4 @@ iframe {
   margin: 0;
   font-size: 0.9rem;
 }
-
 
