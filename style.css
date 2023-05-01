@@ -477,7 +477,7 @@ p {
 
 /* the modal that covers the background and prevents user interactions */
 .modal {
-  display: flex; /* hides the modal from view by default*/
+  display: none; /* hides the modal from view by default*/
   position: fixed; /* keeps the modal in one place */
   z-index: 2; /* positions the modal on top of all other elements on the screen */
   left: 0;
@@ -511,3 +511,61 @@ p {
   align-items: center;
   justify-content: center;
 }
+@keyframes heartbeat {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+
+#modal-image {
+  animation: heartbeat 1s infinite;
+  width: 50%;
+  height: auto;
+}
+
+
+/*---------------------------------------------------------------- */
+
+iframe {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  border: none;
+}
+
+/*------------------------ */
+.footer {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  color: #000000;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__logo img {
+  max-width: 200px;
+}
+
+.footer__info {
+  text-align: center;
+}
+
+.footer__info p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+
