@@ -1,0 +1,513 @@
+
+/* Define the color scheme */
+:root {
+  --primary-color: #005eff; /* blue */
+  --secondary-color: #f2f2f2; /* light gray */
+  --text-color: #444141; /* dark gray */
+  --background-color: #fff; /* white */
+}
+
+.revealable {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* Reset default styles for margin, padding, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.navbar .logo {
+  margin-right: auto;
+}
+
+.navbar .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .links li {
+  margin: 0 10px;
+}
+
+.navbar .links a {
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .links a:hover {
+  background-color: #f7f7f7;
+}
+
+
+.logo img {
+  width: 100px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.links a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.links a:hover {
+  color: #007bff;
+}
+
+.theme-button,
+.reduceMotion {
+  margin-left: 30px;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333333;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.theme-button:hover,
+.reduceMotion:hover {
+  color: #007bff;
+}
+
+
+/* Add a dark mode theme */
+body {
+  height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+.nav-container.dark-mode {
+  background-color: var(--text-color);
+}
+
+.nav-item a.dark-mode {
+  color: var(--primary-color);
+
+}
+
+.dropdown_menu .dark-mode {
+  color: var(--text-color);
+}
+
+/*-------------------------*/
+
+/* Style the header section */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('images/PicHome.png');
+  background-size: cover;
+  background-position: center;
+  color: #0d0c0c;
+  text-align: center;
+}
+
+/* Style the header container */
+.header-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style the header image */
+.header-img {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+/* Style the header text */
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+/* Style the buttons */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Add media queries for responsive design */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
+/*--------------------------------------------------*/
+/* Style the about section */
+.about {
+  padding: 80px 0;
+}
+
+/* Style the section heading */
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Style the paragraph text */
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Add media queries for responsive design */
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/*----------------------------------------------*/
+.data {
+  padding: 50px;
+  text-align: center;
+}
+
+.data h3 {
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.data h4 {
+  margin-top: 50px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.data p {
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.chart-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .data {
+    padding: 30px;
+  }
+  
+  .data h3 {
+    font-size: 28px;
+  }
+  
+  .data h4 {
+    font-size: 24px;
+  }
+  
+  .data p {
+    font-size: 18px;
+  }
+  
+  .chart-container {
+    margin-top: 30px;
+  }
+}
+
+/*------------------------------------------------*/
+.impact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 50px;
+  justify-items: center;
+  align-items: center;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+.impact h2 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.impact img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.impact img:hover {
+  transform: scale(1.1);
+}
+
+.impact h3 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.impact p {
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  .impact {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*--------------------------------------------------*/
+
+/* style for the articles section */
+.articles {
+  padding: 50px;
+}
+
+.article-link {
+  display: block;
+  margin-bottom: 30px;
+  text-decoration: none;
+  color: #000;
+}
+
+.article {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.article:hover {
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+.article-title {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.article-summary {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.article-source {
+  font-style: italic;
+}
+
+/*-------------------------------------*/
+
+.petition {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.petition h2 {
+  font-size: 24px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.petition-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.petition-para p {
+  flex-basis: 100%;
+  margin-bottom: 20px;
+  text-align: left;
+  float: left;
+  max-width: 50%;
+  margin-right: 25%;
+}
+
+.signatures {
+  flex-basis: 100%;
+  margin-bottom: 20px;
+  text-align: right;
+  float: right;
+}
+
+.signatures p {
+  margin: 5px 0;
+  text-align: right;
+}
+
+#sign-petition label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#sign-petition input {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+#sign-now-button {
+  display: block;
+  margin: 0 auto;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#sign-now-button:hover {
+  background-color: #3e8e41;
+}
+
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background:pink;
+}
+
+/* the modal that covers the background and prevents user interactions */
+.modal {
+  display: flex; /* hides the modal from view by default*/
+  position: fixed; /* keeps the modal in one place */
+  z-index: 2; /* positions the modal on top of all other elements on the screen */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.4); /* 40% opacity black - other elements can still be seen */
+  flex-direction: column; /* these flexbox rules center the content on the screen */
+  align-items: center;
+  justify-content: center;
+}
+
+/* box that contains all the content and images */
+.modal-content {
+  background-color: lightsteelblue; /* update the colors and font sizes as you like */
+  color: black;
+  text-align: center;
+  font-size: 3rem;
+  display: flex; /* adds flexbox to center all items */
+  justify-content: center;
+  align-items: center;
+}
+
+#thanks-modal-content {
+  width: 20rem; /* sets a default width for the text container */
+}
+
+#modal-text-container {
+  display: flex; /* adds flexbox to center the text and buttons (stretch feature) */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

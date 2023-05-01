@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="reset-webview.css" rel="stylesheet" type="text/css" />
+    <title>✊🏾Racial Injustice</title>
+  </head>
+  <body id="body">
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <a href="#home" class="nav-logo"><img src="images/Logo1.png" alt="Logo"></a>
+        </div>
+        <ul class="links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#data">Data</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#articles">Articles</a></li>
+          <li><button id="theme-button">Toggle Dark Mode</button></li>
+          <li><button id="reduceMotion">Reduce Motion</button></li>
+        </ul>
+    </header> 
+
+<section class="home" id="home">
+  <div class="header-container" id="header-item">
+    <h1>The Imperative Education of Racial Injustice</h1>
+    <h3>Knowledge is power: Education is the key to dismantling racial injustice.</h3>
+    <button type="button">oooh this is a button</button>
+    <button type="button">another button!</button>
+    </div>
+  </section>
+
+    <!--- About --->
+    <section class="about revealable active" id="about">
+    <h2>Why should we break the cycle?</h2>
+     <p>Racial injustice education is an essential and continuing process that entails identifying and comprehending oppressed populations' historical and systematic oppression.</p>
+    <p>It also entails learning about the experiences and viewpoints of those affected by racism, as well as adopting methods for improving equity and social justice.</p>
+    <p>Racial injustice education may take place in a range of contexts, including schools, workplaces, and communities, and it is critical for developing a more fair and equitable society.
+    </p>
+    </section>
+
+    <!--- Data --->
+    <section class="data revealable active" id="data">
+    <h3>Data about my topic</h3>
+
+    <canvas id="myChart"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: ['White', 'Asian', 'Hispanic', 'Black'],
+          datasets: [{
+              label: '% of Students Who Graduate High School',
+              data: [88, 91, 78, 73],
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
+  </script>
+    <h4>Add some charts + captions that illustrate my topic and why it is a problem </h4>
+    </section>
+    
+    <!--- Impact --->
+    <section class="impact revealable active" id="impact">
+    <h2>Impact!</h2>
+
+    <img src="images/Picture1.png" />
+    <h3>Educate</h3>
+    <p>Racial injustice is defined as unfair treatment and discrimination based on race or ethnicity. It can manifest itself in a variety of ways, including discrimination in employment, housing, education, and the criminal justice system. Addressing racial injustice necessitates understanding it and the ways it has been perpetuated.
+    </p>
+
+    <img src="images/Picture2.png" />
+    <h3>Inform You</h3>
+    <p>The COVID-19 epidemic has disproportionately afflicted people of color, notably African Americans and Latinx people. Individuals of color are more likely than white people to be arrested, convicted, and sentenced to prison for the same offences. They also experience housing and employment discrimination, which can limit their access to excellent homes and career prospects.
+    </p>
+
+    <img src="images/Picture3.png" />
+    <h3>Racism</h3>
+    <p>Racism has a long history in the United States, and its influence can be found in many aspects of education, business, media, and daily life. Following the death of George Floyd in Minnesota, as well as many other high-profile police shootings, Black Lives Matter rallies erupted throughout the country and have since persisted as activists demand significant change. 
+    </p>
+      
+    <img src="images/Picture4.png" />
+    <h3>Where else else can this problem have lasting effects?</h3>
+    <p>Many social workers are all too aware of the devastating and long-term effects of racial injustice on individuals' mental and physical health, and the NASW has recently expressed its support for federal legislation enacting police reform and addressing systemic racism within the criminal justice system.
+    </p>  
+</section>
+
+    <!--- News ---> 
+    <section class="articles revealable active" id="articles">
+  <h2>Recent News</h2>
+
+  <a class="article-link" target="_blank" href="https://www.nytimes.com/2021/07/27/us/covid-race-impact-black-education.html">
+    <article class="article">
+      <h3 class="article-title">COVID-19’s Unequal Toll on Black Education</h3>
+      <p class="article-summary">Black students in America have been far less likely than white students to attend in-person school during the pandemic, according to a new analysis.</p>
+      <span class="article-source">The New York Times</span>
+    </article>
+  </a>
+
+  <a class="article-link" target="_blank" href="https://www.theguardian.com/us-news/2022/mar/16/black-lives-matter-activist-killed-jacksonville-florida">
+    <article class="article">
+      <h3 class="article-title">Black Lives Matter activist shot and killed in Florida</h3>
+      <p class="article-summary">James DeVaughn, who was active in the Black Lives Matter movement in Jacksonville, was shot and killed on Sunday evening.</p>
+      <span class="article-source">The Guardian</span>
+    </article>
+  </a>
+
+  <a class="article-link" target="_blank" href="https://www.npr.org/2022/03/11/1086090305/marshae-jones-alabama-abortion-case-will-go-to-u-s-supreme-court">
+    <article class="article">
+      <h3 class="article-title">Alabama Abortion Case Will Go To U.S. Supreme Court</h3>
+      <p class="article-summary">The U.S. Supreme Court has agreed to hear a case involving Marshae Jones, who was charged with manslaughter after a fetus she was carrying died in a shooting.</p>
+      <span class="article-source">NPR</span>
+    </article>
+  </a>
+</section>
+
+   <div class="petition revealable active" id="petition">
+
+    <h2>Sign Our Petition 📢</h2>
+    <div class="petition-container">
+
+
+      <div class="petition-para">
+        <!-- info goes here -->
+        <p>Join the movement for The Imperative Education of Racial Injustice and take a stand against systemic racism. Educate yourself and others on the history of racial injustice and its lasting effects on our society. Support initiatives and organizations that promote diversity, equity, and inclusion. Together, we can create a more just and equitable world for all.</p>
+      </div>
+
+      <div class="signatures" id="counter">
+        <p>🖊️ DJ from Brooklyn supports this.</p>
+        <p>🖊️ Amy from Queens supports this.</p>
+        <p>🖊️ Teresa from Harlem supports this.</p>
+        <p id="kounter">🖊️ 3 people have signed this petition and support this cause.</p>
+      </div>
+
+    </div>
+
+  <!--- Sign Petition Form --->
+  <form id="sign-petition" title="sign-petition">
+    <!-- inputs go here -->
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
+
+<label for="hometown">Hometown:</label>
+<input type="text" id="hometown" name="hometown" required>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+
+  </form>
+
+   <!--- Sign Now Button --->
+  <button id="sign-now-button">Sign Now</button>
+</div>
+<!---
+<div id="thanks-modal" class="modal">
+
+  
+  <div class="modal-content">
+    <div id="modal-text-container">
+      <p id="thanks-modal-content">Thank you for your support!</p>
+      
+    </div>
+    <img src="images/African-American.jpg" alt="Celebration image">
+  </div>
+    
+</div>
+    -->
+<script src="index.js"></script>
+<script src="script.js"></script>
+  </body>
+</html>
